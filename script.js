@@ -52,17 +52,17 @@ function showMainMenu() {
             <p style="font-size: 13px; color: #666; margin: 0 0 10px 0; text-align:center;">بەشێک هەڵبژێره یان لینکەکەی کۆپی بکە</p>
             
             <div class="menu-grid">
-                <div class="menu-block"><div class="menu-item" onclick="startLoveProject()">💖 پەیمانی ئەشق</div><button class="copy-btn" onclick="copyLink('love')">کۆپیکردنی لینک 🔗</button></div>
-                <div class="menu-block"><div class="menu-item" onclick="startIntroProject()">🌱 یەکتر ناسین</div><button class="copy-btn" onclick="startIntroProject()">دروستکردنی لینک 🔗</button></div>
+                <div class="menu-block"><div class="menu-item" onclick="startLoveProject()">💖 بزانە تۆی خۆشەوێ؟</div><button class="copy-btn" onclick="copyLink('love')">کۆپیکردنی لینک 🔗</button></div>
+                <div class="menu-block"><div class="menu-item" onclick="startIntroProject()">🌱 بۆ ناسین</div><button class="copy-btn" onclick="startIntroProject()">دروستکردنی لینک 🔗</button></div>
                 <div class="menu-block"><div class="menu-item" onclick="startApologyProject()">🥺 ئاشتکردنەوە</div><button class="copy-btn" onclick="copyLink('apology')">کۆپیکردنی لینک 🔗</button></div>
-                <div class="menu-block"><div class="menu-item" onclick="startCalculatorProject()">🔮 ڕێژەی عەشق</div><button class="copy-btn" onclick="copyLink('calc')">کۆپیکردنی لینک 🔗</button></div>
+                <div class="menu-block"><div class="menu-item" onclick="startCalculatorProject()">🔮 ڕێژەی خۆشەویستی</div><button class="copy-btn" onclick="copyLink('calc')">کۆپیکردنی لینک 🔗</button></div>
                 <div class="menu-block"><div class="menu-item" onclick="startPromiseProject()">🔒 بەڵێنی ئەبەدی</div><button class="copy-btn" onclick="copyLink('promise')">کۆپیکردنی لینک 🔗</button></div>
-                <div class="menu-block"><div class="menu-item" onclick="startCertificateProject()">💌 پسوولەی دڵ</div><button class="copy-btn" onclick="copyLink('cert')">کۆپیکردنی لینک 🔗</button></div>
+                <div class="menu-block"><div class="menu-item" onclick="startCertificateProject()">💌 پێشکەشکردنی دڵت</div><button class="copy-btn" onclick="copyLink('cert')">کۆپیکردنی لینک 🔗</button></div>
             </div>
         </div>
         <div class="btn-group-wrapper"></div>
     `;
-    typeWriter('menuTitle', '🌟 بەخێرهێی دڵەکەم 🌟', 50);
+    typeWriter('menuTitle', '🌟 بەخێربێی دڵەکەم 🌟', 50);
 }
 
 function checkUrlParameters() {
@@ -168,7 +168,7 @@ function showIntroToGirl() {
             </div>
         </div>
     `;
-    typeWriter('introText', 'ئایا ئامادەیت کاتێکی خۆش پێکەوە بەسەر بەرین و زیاتر یەکتر بناسین؟ ⚡🌸');
+    typeWriter('introText', 'یەکتر بناسین؟ ⚡🌸');
 }
 
 function introResponse(isYes) {
@@ -177,8 +177,8 @@ function introResponse(isYes) {
         askGirlDetails(); 
     } else {
         noCount++;
-        if (noCount === 1) typeWriter('introText', 'دڵنیایت؟ تکایه پێم مەڵێ نەخێر... جارێکی تر بیر بکەرەوە! 🥺💔');
-        else if (noCount === 2) typeWriter('introText', 'هێشتا هەر دەڵێی نەخێر?! کچێ وا مەکە ڕازی ببه دەی! 😤👉');
+        if (noCount === 1) typeWriter('introText', 'دڵنیایی، دە مەڵێ نەخێر ڕازیبە پلیسس 🥺💔');
+        else if (noCount === 2) typeWriter('introText', 'هێشتا هەر عینادیی ئەکەییی؟ دە ڕازیبە کچێ با نەیەمم بۆو 😤👉');
         else if (noCount >= 3) {
             dynamicContent.innerHTML = `
                 <div class="content-area" style="justify-content: center; height: 100%;">
@@ -186,10 +186,10 @@ function introResponse(isYes) {
                     <h1 class="premium-text" id="finalLockText" style="font-size: 26px; color: #d90429; line-height: 1.6; padding: 10px;"></h1>
                 </div>
                 <div class="btn-group-wrapper">
-                    <button class="btn yes-btn" onclick="askGirlDetails()" style="width: 100%;">بەڵێ فەرموو (تەنها ئەم ڕێگایە ماوە) ❤️</button>
+                    <button class="btn yes-btn" onclick="askGirlDetails()" style="width: 100%;">بەڵێ (تەنها ئەم ڕێگایە ماوە) ❤️</button>
                 </div>
             `;
-            typeWriter('finalLockText', 'تەواو ئیتر ناهێڵم ڕام بکەیتەوە. هەلێکم پێبدە چاو جوان! 😉🔒✨', 50);
+            typeWriter('finalLockText', 'تەواو ئیتر ناهێڵم ڕەتم بکەیتەوە. هەلێکم پێبدە چاو جوان! 😉🔒✨', 50);
         }
     }
 }
@@ -258,11 +258,11 @@ function showFinalIntroCard() {
 
 function copyFinalResultLink(link) {
     navigator.clipboard.writeText(link).then(() => {
-        alert('لینیاتی ئەنجامەکە کۆپی کرا! بینێرەوە بۆ کوڕەکە تا زانیارییەکانت ببینێت 🌸');
+        alert('لینیاتی ئەنجامەکە کۆپی کرا! بینێرەوە بۆ ەکە تا زانیارییەکانت ببینێت 🌸');
     });
 }
 
-// فەنکشنێک بۆ کاتێک کوڕەکە لینکە گەڕاوەکەی کچەکە دەکاتەوە (تەنها بۆ بینینی کارتەکە بە تەواوی)
+// فەنکشنێک بۆ کاتێک ەکە لینکە گەڕاوەکەی کچەکە دەکاتەوە (تەنها بۆ بینینی کارتەکە بە تەواوی)
 function showFinalIntroCardViewOnly() {
     const urlParams = new URLSearchParams(window.location.search);
     const bName = decodeURIComponent(urlParams.get('bname') || 'نادیار');

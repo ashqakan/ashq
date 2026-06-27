@@ -379,8 +379,9 @@ function revealPromise(name) {
         </div>
     `;
     if(openBoxBtn) {
-        openBoxBtn.setAttribute("onclick", "goBackHome()");
-        openBoxBtn.innerText = "داخستن ↩️";
+        openBoxBtn.setAttribute("onclick", "location.reload()");
+        openBoxBtn.style.background = "#6c757d";
+        openBoxBtn.innerText = "دووبارەکردنەوە 🔄";
     }
     typeWriter('promiseTextAnim', `بۆ نازدارترین و هێمن‌ترین دڵی دونیا، بۆ شازادە ${name}.. بەڵێنت پێدەدەم کە لە خۆشی و ناخۆشیدا، لە تەنگانە و پێکەنیندا، دەستت بەربنەدەم. تۆ تەنها خۆشەویستی من نیت، تۆ تەواکەری ڕۆح و داهاتووی منیت. تا دوا هەناسە لێدانی دڵم, هۆگری تۆ دەبم! ❤️`, 40);
 }
@@ -489,7 +490,7 @@ function generateCertificate() {
             </div>
         </div>
         <div class="btn-group-wrapper">
-            <button class="btn main-btn" onclick="goBackHome()">گەڕانەوە بۆ مێنیو ↩️</button>
+            <button class="btn main-btn" onclick="location.reload()" style="background: #6c757d;">دووبارەکردنەوە 🔄</button>
         </div>
     `;
 }
@@ -526,7 +527,7 @@ function apologyResponse(isForgiven) {
                 <h2 class="premium-text" id="apologyYesText"></h2>
             </div>
             <div class="btn-group-wrapper">
-                <button class="btn main-btn" onclick="goBackHome()">گەڕانەوە بۆ مێنیو ↩️</button>
+                <button class="btn main-btn" onclick="location.reload()" style="background: #6c757d;">دووبارەکردنەوە 🔄</button>
             </div>
         `;
         typeWriter('apologyYesText', 'ئۆیی فیدای ئەو دڵە پاکەت بم! بەڵێن بێت ئیتر هەرگیز چاوە جوانتەکانت نزم نەکەمەوە... 🌸✨🥰');
@@ -540,8 +541,9 @@ function apologyResponse(isForgiven) {
                     <img src="https://i.pinimg.com/originals/cb/16/5d/cb165d4a8a452d2bc0e942a95922d449.gif" style="width: 110px; height: 110px; margin-bottom: 10px; border-radius: 15px; object-fit: cover;">
                     <h1 class="premium-text" id="apologyLockText" style="font-size: 25px; color: #d90429; line-height: 1.6; padding: 10px;"></h1>
                 </div>
-                <div class="btn-group-wrapper">
+                <div class="btn-group-wrapper" style="width:100%; display:flex; flex-direction:column; gap:5px;">
                     <button class="btn yes-btn" onclick="apologyResponse(true)" style="width: 100%;">ئیتر لێت خۆشبووم گەردنت ئازاد بێت 🤍</button>
+                    <button class="btn no-btn" onclick="location.reload()" style="width: 100%; background: #6c757d;">دووبارەکردنەوە 🔄</button>
                 </div>
             `;
             typeWriter('apologyLockText', 'هەرچەنە زۆریش کەلەڕەقیت بەڵام هەر خۆشم دەوێی! ئیتر ڕێگای ڕاکردنت نییە، کلیک لە خوارەوە بکە و با ئاشت بینەوە 😉🔐✨', 50);
@@ -712,6 +714,7 @@ function runAway() {
     btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
 
+// ١. چاککردنی کۆتایی (پەیماننامەی ئەشقی من و تۆ - پڕۆژەی یەکەم)
 function showFinalCertificate(answerText) {
     const dynamicContent = document.getElementById('dynamicContent');
     dynamicContent.innerHTML = `
@@ -724,7 +727,7 @@ function showFinalCertificate(answerText) {
             </div>
         </div>
         <div class="btn-group-wrapper">
-            <button class="btn main-btn" onclick="goBackHome()" style="background: linear-gradient(45deg, #9c27b0, #e040fb);">گەڕانەوە بۆ مێنیوی سەرەکی 🔄</button>
+            <button class="btn main-btn" onclick="location.reload()" style="background: linear-gradient(45deg, #6c757d, #495057);">دووبارەکردنەوە 🔄</button>
         </div>
     `;
     typeWriter('typeTextCertTitle', '📜 پەیماننامەی ئەشقی من و تۆ', 40);
